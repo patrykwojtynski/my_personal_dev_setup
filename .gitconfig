@@ -1,0 +1,14 @@
+[alias]
+	co = checkout
+	cob = checkout -b
+	s = status
+	amend = commit --amend -m
+	p = pull
+	up = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
+	b = branch
+	db = branch -D
+	cam = commit -a -m
+	st = stash
+	stp = stash pop
+[branch]
+	autosetuprebase = always
